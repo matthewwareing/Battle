@@ -15,13 +15,6 @@ describe Player do
         end
     end
 
-    describe '#attack' do
-        it 'damages the player' do
-            expect(wareing).to receive(:receive_damage)
-            matthew.attack(wareing)
-        end
-    end
-
     describe '#receive_damage' do
         it 'reduces hitpoints by 10' do
             expect{ matthew.receive_damage }.to change{matthew.hitpoints}.by -10
